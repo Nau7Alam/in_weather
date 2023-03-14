@@ -31,7 +31,6 @@ const mainIcons = {
     Dust: "wi-fog",
     Fog: "wi-fog",
     Sand: "wi-fog",
-    Dust: "wi-fog",
     Ash: "wi-fog",
     Squall: "wi-fog",
     Tornado: "wi-fog",
