@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import { days, mainIcons, options } from "../services/constant";
+import { useEffect, useRef, useState } from "react";
+import { mainIcons, options } from "../services/constant";
 
 const SideBar = ({ searchValue, getSearchValue, onSubmit, cityWeather }) => {
     const searchRef = useRef(null)
