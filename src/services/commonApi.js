@@ -1,8 +1,9 @@
 import Axios from "axios";
+import { WEATHER_KEY } from "./constant";
 
 const commonApi = async (method, url, data) => {
-    const key = process.env.REACT_APP_WEATHER_KEY;
-    const baseUrl = process.env.REACT_APP_BASE_URL;
+    const key = WEATHER_KEY;
+    const baseUrl = BASE_URL;
     return Axios({
         method: method,
         url: baseUrl + url + '&appid=' + key,
