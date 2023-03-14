@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { WEATHER_KEY } from "./constant";
+import { BASE_URL, WEATHER_KEY } from "./constant";
 
 const commonApi = async (method, url, data) => {
     const key = WEATHER_KEY;

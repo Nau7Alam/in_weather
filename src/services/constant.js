@@ -1,6 +1,6 @@
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-WEATHER_KEY = 'c2450a2b200f23a18effe69ca918197f'
-BASE_URL = 'https://api.openweathermap.org'
+const WEATHER_KEY = 'c2450a2b200f23a18effe69ca918197f'
+const BASE_URL = 'https://api.openweathermap.org'
 const options = {
     weekday: "long",
     hour: "numeric",
