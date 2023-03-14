@@ -1,38 +1,183 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
 .App {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar{
+  flex:1;
+  padding:3%;
+  padding-bottom: 1%;
+  background-color: #fff;
+}
+
+.search-detail{
+  flex:2;
+  padding:3%;
+  padding-bottom: 1%;
+}
+.search-detail h5{
+  font-weight: 500;
+}
+.search-box{
+  display: flex;
+}
+
+.search-input,.search-button{
+  display: block;
+}
+.search-input{
+  all: unset;
+  flex:1;
+  padding:6px 10px;
+
+}
+
+.search-button{
+  all: unset;
+  padding: 5px 10px;
+  border: 2px solid rgb(59, 58, 58);
+  border-radius: 1.4rem;
+}
+
+.search-button:hover{
+  border: 2px solid black;
+  background-color:  #f4f1f1;
+}
+
+.main-icon{
+  font-size: 8rem;
+  padding:1rem 4px 25px 0;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.selected-temp{
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+.selected-type{
+  margin-top: 2.4rem;
+  text-transform: capitalize;
+}
+.selected-day{
+  margin-top: 10px;
+}
+.selected-detail h5{
+  margin-bottom: 10px;
+}
+.selected-image{
+  margin-top: 1.3rem;
+  height: 100px;
+  width: 100%;
+  border-radius: 1.3rem;
+  background-image: url('../public/city-img.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  box-shadow: 0px 0px 3px #f4f1f1,0px 0px 3px #f4f1f1;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.image-overlay{
+  height: 100px;
+  width: 100%;  
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: rgba(97, 89, 89, 0.413);
 }
 
-.App-link {
-  color: #61dafb;
+.selected-image .city-name{
+  color: #fff;
+  font-weight: 600;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.next-day-cards{
+  padding:2rem 0.4rem;
+  display: flex;
+  gap: 10px;
+}
+.highlights-cards{
+  padding:1rem 0rem;
+  padding-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day-card{
+  position: relative;
+  padding:1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 1.3rem;
+  box-shadow: 0px 0px 3px #f4f1f1,0px 0px 3px #f4f1f1;
+}
+.day-card:hover{
+background-color: #f4f1f1;;
+}
+
+.day-card-small{
+  flex: 1;
+}
+
+.day-card-big{
+  width: 29.33%;
+  margin:2%;
+}
+
+.day-card-icon{
+  font-size: 1.7em;
+  margin-left: 10%;
+}
+.day-card-temp{
+  margin-top: 10px;
+}
+.title-box{
+  display: flex;
+  justify-content: space-between;
+}
+.temp-switch{
+  background-color: #fff;
+  box-shadow: 0px 0px 3px #f4f1f1,0px 0px 3px #f4f1f1;
+  margin-left: 10px;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+}
+.active-switch{
+  background-color: black;
+  color: #fff;
+}
+.switch-box{
+  display: flex;
+  text-align: center;
+  vertical-align:middle;
+}
+
+@media screen and (max-width:800px) {
+  .App{
+    flex-direction:column;
   }
-  to {
-    transform: rotate(360deg);
+  .next-day-cards{
+    overflow-y: scroll;
+  }
+  .next-day-cards div,.highlights-cards div{
+    min-width: 45.33%;
+  }
+  .main-icon{
+    font-size: 5rem;
+  }
+  .selected-temp{
+    font-size: 2.2rem;
+  }
+  .selected-type{
+    margin-top: 0.5rem;
   }
 }
